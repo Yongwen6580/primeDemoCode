@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package prime;
+
+option go_package = "../prime";
+
+service PrimeChecker {
+  rpc IsPrime(PrimeRequest) returns (PrimeResponse) {}
+}
+
+message PrimeRequest {
+  int32 number = 1;
+}
+
+message PrimeResponse {
+  bool is_prime = 1;
+}
